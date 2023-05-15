@@ -1,0 +1,71 @@
+main {
+    color: rgb(255, 255, 255);
+    grid-area: main;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto auto repeat(3, 1fr);
+    grid-template-rows: repeat(4, 130px) auto;
+    grid-template-areas:
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+}
+
+.mainLeftBar {
+    grid-area: leftBar;
+}
+
+.mainRightBar {
+    grid-area: rightBar;
+}
+
+.mainCenter {
+    grid-area: mainCenter;
+    min-width: 550px;
+    max-width: 50vw;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows:  5px auto;
+    grid-template-areas:
+      "centerHeader"
+      "categories"
+}
+
+.categoryBar {
+    height: max-content;
+    background-color: rgb(55, 55, 55);
+    border-radius: 20px 20px 20px 20px;
+    grid-area: categories;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.categoryBar div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 30%;
+    max-width: 230px;
+    border: solid 2px white;
+    border-radius: 20px;
+}
+
+.categoryBar div p {
+    font-size: large;
+}
+
+.categoryBar div:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 5px 3px rgb(255, 242, 0);
+}
+
+.categoryBar div:active {
+    box-shadow: 0px 1px 5px 3px rgb(255, 153, 0);
+}

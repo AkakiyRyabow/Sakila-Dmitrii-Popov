@@ -1,0 +1,37 @@
+header {
+    background-color: rgb(38, 38, 38);
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 200px auto 450px auto 200px;              
+    grid-template-rows: 80px 80px 80px;
+    grid-template-areas: "H-left . H-center . H-right";
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerLeftDiv {
+    grid-area: H-left;
+}
+
+.headerCenterDiv {
+    border-radius: 0 0 20px 20px;
+    background-color: rgb(55, 55, 55);
+    grid-area: H-center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.headerCenterDiv a {
+    height: 23px;   
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+.headerRightDiv {
+    grid-area: H-right;
+}

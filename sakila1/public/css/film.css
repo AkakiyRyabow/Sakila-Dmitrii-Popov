@@ -1,0 +1,54 @@
+main {
+    color: rgb(255, 255, 255);
+    grid-area: main;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto auto repeat(3, 1fr);
+    grid-template-rows: repeat(4, 130px) auto;
+    grid-template-areas:
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+}
+
+.mainLeftBar {
+    grid-area: leftBar;
+}
+
+.mainRightBar {
+    grid-area: rightBar;
+}
+
+.mainCenter {
+    background-color: rgb(55, 55, 55);
+    border-radius: 20px 20px 20px 20px;
+    grid-area: mainCenter;
+    min-width: 800px;
+    max-width: 50vw;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: auto 50px;
+    grid-template-areas:
+      "filmBar"
+      "centerFooter"
+}
+
+.centerDiv {
+    grid-area: filmBar;
+}
+
+.filmCenter {
+    display: flex;
+    justify-content: space-around;
+}
+
+.filmHeader {
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+}
