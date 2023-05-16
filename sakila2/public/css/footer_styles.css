@@ -1,0 +1,5 @@
+footer {
+    color: aqua;
+    background-color: aliceblue;
+    grid-area: footer;
+}

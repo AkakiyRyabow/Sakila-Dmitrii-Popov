@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakila OY</title>
+    <link rel="stylesheet" type="text/css" href="/css/header_styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/film.css">
+    <link rel="stylesheet" type="text/css" href="/css/common_styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer_styles.css">
+    <script src='https://kit.fontawesome.com/4a30715f09.js' crossorigin='anonymous'></script>
+</head>
+<%- include("partials_ejs/header"); %>
+<main>
+    <div class="mainLeftBar">
+    </div>
+    <div class="mainCenter">
+        <div class="centerDiv>">
+            <div class="filmHeader">
+                <h1><%=filmData[0].title%></h1> 
+                <p>Release year: <%=filmData[0].release_year%></p>
+            </div>
+            <p><%=filmData[0].description%></p>
+            <div class="filmCenter">
+                <p><%=filmLength%></p>
+                <p>$<%=filmData[0].replacement_cost%></p>
+                <p><%=filmData[0].rating%></p>
+            </div>
+            <div class="filmFooter">
+                <h4>Actors:</h4>
+                <p><%=filmData[0].actors%></p>
+                <br>
+                <h4>Special features:</h4>
+                <p><%=filmData[0].special_features%></p>
+            </div> 
+        </div> 
+    </div>
+    <div class="mainRightBar">
+    </div> 
+</main>
+<script  src="/js/film.js"></script>
+<%- include("partials_ejs/footer"); %>

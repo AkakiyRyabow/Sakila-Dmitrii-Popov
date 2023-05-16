@@ -1,0 +1,99 @@
+::selection{
+  color: #fff;
+  background: #664AFF;
+}
+
+.container{
+  min-width: 250px;
+  width: 400px;
+  max-width: 550px;
+}
+
+.container .searchInput{
+  background: #fff;
+  width: 100%;
+  border-radius: 20px 20px 20px 20px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+.searchInput input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+}
+
+.searchInput.active input{
+  border-radius: 20px 20px 20px 20px;
+}
+
+.searchInput .resultBox{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 145px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.searchInput.active .resultBox{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.resultBox a{
+  list-style: none;
+  padding: 3px 12px;
+  display: none;
+  width: 100%;
+  border-radius: 20px 20px 20px 20px;
+  text-decoration: none;
+  color: rgb(69, 69, 69);
+}
+
+.searchInput.active .resultBox a{
+  display: block;
+}
+
+.resultBox a:hover{
+  background: #efefef;
+}
+
+.searchInput .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #20aad8;
+  cursor: pointer;
+}
+
+.searchParams {
+  display: flex;
+  justify-content: center;
+  font-size: medium;
+  margin-bottom: 5px;
+}
+
+.searchParams a{
+  font-size: 18px;
+}
+
+.searchParams span:hover{
+  cursor: pointer;
+}
+
+.searchParams .active{
+  color: #20aad8;
+  border-bottom: dashed 2px #20aad8;
+}

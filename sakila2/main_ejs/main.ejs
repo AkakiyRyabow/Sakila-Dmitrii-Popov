@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakila OY</title>
+    <link rel="stylesheet" type="text/css" href="/css/header_styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/main_styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/searchbar_styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/common_styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer_styles.css">
+    <script src='https://kit.fontawesome.com/4a30715f09.js' crossorigin='anonymous'></script>
+</head>
+<%- include("partials_ejs/header"); %>
+<main>
+    <div class="mainLeftBar">
+    </div>
+    <div class="mainCenter">
+        <div class="centerHeader">
+            <p>Löytä sinulle sopiva <br><em>leffaa...</em></p>
+        </div>
+        <div class="searchBar">
+            <%- include("partials_ejs/searchbar"); %>
+        </div>
+        <div class="centerFooter">
+            <p id="a">tai katso koko<br><em onclick="location.href='/categories';">valikoimamme.</em></p>
+        </div>
+    </div>
+    <div class="mainRightBar">
+    </div> 
+</main>
+<%- include("partials_ejs/footer"); %>

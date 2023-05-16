@@ -1,0 +1,56 @@
+header {
+    background-color: #373435;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: auto auto 450px auto 200px;              
+    grid-template-rows: 80px 80px 80px;
+    grid-template-areas: "H-left . H-center . H-right";
+    box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.551);
+    border-radius: 0 0 20px 20px;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerLeftDiv {
+    margin-left: 3px;
+    width: fit-content;
+    display: flex;
+    gap: 20px;
+    grid-area: H-left;
+}
+
+.headerCenterDiv {
+    grid-area: H-center;
+}
+
+.headerLeftDiv a {
+    font-size: larger;
+    font-weight: 300;
+    height: 23px;   
+    border-bottom: 2px solid #20aad8;
+    cursor: pointer;
+}
+
+.headerLeftDiv p {
+    font-size: larger;
+    font-weight: 300;
+}
+
+.headerLeftDiv a:hover {
+    color: #20aad8;
+}
+
+.headerRightDiv {
+    grid-area: H-right;
+}
+
+.logo {
+    cursor: pointer;
+    border-radius: 20px;
+    height: 76px;
+    width: 76px;
+}

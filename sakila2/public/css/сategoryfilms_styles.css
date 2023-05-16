@@ -1,0 +1,144 @@
+main {
+    color: rgb(255, 255, 255);
+    grid-area: main;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto auto repeat(3, 1fr);
+    grid-template-rows: repeat(4, 130px) auto;
+    grid-template-areas:
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+}
+
+.mainLeftBar {
+    grid-area: leftBar;
+}
+
+.mainRightBar {
+    grid-area: rightBar;
+}
+
+.mainCenter {
+    background-color: #373435;
+    border-radius: 20px 20px 20px 20px;
+    grid-area: mainCenter;
+    min-width: 800px;
+    max-width: 50vw;
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: auto 50px;
+    grid-template-areas:
+      "filmsBar"
+      "centerFooter"
+}
+
+.filmsBar {
+    grid-area: filmsBar;
+    height: fit-content;
+}
+
+.filmDiv {
+    margin-top: 20px;
+    background-color: rgba(39, 39, 39, 0.655) ;
+    color: rgb(252, 252, 252);
+    display: grid;
+    grid-template-columns: repeat(2, 25%) auto; 
+    grid-template-rows:  35px repeat(3, auto);
+    grid-template-areas:
+      "filmDivHeader filmDivHeader filmAsideDiv"
+      "filmDivCenter filmDivCenter filmAsideDiv"
+      "filmDivCenter filmDivCenter filmAsideDiv"
+      "filmDivCenter filmDivCenter filmAsideDiv"     
+}
+
+.filmHeader {
+    padding-left: 10px;
+    grid-area: filmDivHeader;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.filmDivOther span {
+    color: #20aad8;
+}
+
+/*****************************************************/
+
+.filmCenter {
+    grid-area: filmDivCenter;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-height: 100px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+/*****************************************************/
+
+.filmAside {
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-area: filmAsideDiv;
+    border-left: solid 1px white;
+    display: grid;
+    grid-template-columns: auto; 
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "filmAgeDiv"
+      "filmPriceDiv"
+      "filmPriceDiv"
+}
+
+.filmDivOther {
+    grid-area: filmAgeDiv;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftData {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filmPrice {
+    grid-area: filmPriceDiv;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.centerFooter {
+    grid-area: centerFooter;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filmDiv a {
+    color: rgb(241, 241, 241);
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 500;
+    border-bottom: solid 2px white;
+}
+
+.filmDiv h2 {
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.filmDiv h4 {
+    font-size: small;
+    font-weight: 300;
+}
