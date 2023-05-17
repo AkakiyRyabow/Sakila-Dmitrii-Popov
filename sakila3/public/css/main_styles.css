@@ -1,0 +1,91 @@
+main {
+    color: rgb(255, 255, 255);
+    grid-area: main;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 300px 300px repeat(3, 1fr);
+    grid-template-rows: repeat(4, 130px) auto;
+    grid-template-areas:
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      "leftBar leftBar leftBar mainCenter mainCenter rightBar rightBar rightBar"
+      ". . films films films films .  ."
+}
+
+.mainLeftBar {
+    grid-area: leftBar;
+}
+
+.mainRightBar {
+    grid-area: rightBar;
+}
+
+.mainCenter {
+    grid-area: mainCenter;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows:  170px 230px 100px 120px;
+    grid-template-areas:
+      "centerHeader"
+      "searchbar"
+      "centerFooter";
+}
+
+.centerHeader {
+    border-radius: 20px 20px 0 0 ;
+    background-color: #373435;
+    grid-area: centerHeader;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerHeader p, .centerHeader em {
+    font-style: normal;
+    font-weight: 400;
+    font-size: xx-large;
+}
+
+em {
+    color: #20aad8;
+}
+
+.centerFooter em {
+    cursor: pointer;
+    color: #20aad8;
+}
+
+.centerFooter em:hover {
+    cursor: pointer;
+    color: #156a86;
+}
+
+.searchBar {
+    background-color: #373435;
+    height: 230px;
+    grid-area: searchbar;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.centerFooter p, .centerFooter em {
+    font-style: normal;
+    font-weight: 400;
+    font-size: xx-large;
+    
+}
+
+#a {
+    border-top: solid 2px white;
+}
+
+.centerFooter {
+    background-color: #373435;
+    border-radius: 0 0 20px 20px;
+    grid-area: centerFooter;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}

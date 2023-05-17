@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  height: fit-content;
+  min-height: 110%;
+}
+
+body {
+    color: white;
+    background: rgb(255,105,234);
+    background: linear-gradient(90deg, rgba(226, 178, 220, 0.94) 0%, rgba(136, 187, 229, 0.49) 50%, rgba(123, 162, 221, 0.518) 100%); 
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 80px repeat(2, 2fr) 80px; /*height*/
+    grid-template-areas:
+      "header header header"
+      "main main main"
+      "main main main"
+      "footer footer footer";
+}
+
+

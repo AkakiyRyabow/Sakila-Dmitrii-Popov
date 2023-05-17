@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakila OY</title>
+    <link rel="stylesheet" type="text/css" href="/css/header_styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/common_styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/сategoryfilms_styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/footer_styles.css">
+    <link rel="stylesheet" type="text/css" href="/jquery/simplePagination.js-master/simplePagination.css" />
+</head>
+<%- include("partials_ejs/header"); %>
+<main>
+    <div class="mainLeftBar">
+    </div>
+    <div class="mainCenter">
+        <div class="filmsBar">
+        </div>
+        <div class="centerFooter">
+            <div id="light-pagination" class="pagination"></div>
+        </div>
+    </div>
+    <div class="mainRightBar">
+    </div> 
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="/jquery/simplePagination.js-master/jquery.simplePagination.js"></script>
+<script  src="/js/category.js"></script>
+<%- include("partials_ejs/footer"); %>
